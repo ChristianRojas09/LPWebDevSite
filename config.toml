@@ -1,0 +1,50 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'LP Web Dev Team'
+theme = "hugo-PaperMod"
+
+
+# Home page parameters
+[params.homeInfoParams]
+Title = "Welcome!"
+Content = "This is a sandbox site created to practice and test static web pages. These sort of pages are great for building portfolios!"
+
+# Automatically add content sections to main menu
+sectionPagesMenu = "main"
+
+
+[menu]
+  [[menu.main]]
+    identifier = "home" ##menu identifier
+    name = "home" # Menu name - this is what shows up on the browser
+    url = "/" #This is the slug. Home should always be "/"
+    weight = 1  #Weight sets the priority. 1 will make this the first menu item from left to right
+   
+   [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    url = "/about/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "team"
+    name = "team"
+    url = "/team/"
+    weight = 4
+
+
+#Declare menu taxonomies
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+#Create search function ---- Work in progress
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
